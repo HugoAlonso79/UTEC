@@ -1,3 +1,6 @@
+frutas=["FRESA","MANGO","LIMON","MELON","PALTA","CACAO","OLIVA","ANANA"]
+n=5
+m=0
 matrix=[]
 letras=["A","B","C","D","E"]
 for i in letras:
@@ -9,3 +12,22 @@ for i in letras:
 
 for i in matrix:
     print(i)
+for i in range(n+3):
+    palabra=input("Inserta el nombre de una fruta en mayuúsculas")
+    if palabra not in frutas:
+        print("Palabra Incorrecta")
+        m+=1
+    else:
+        for z in range(5):
+            matrix[i-m][z]=palabra[z]+" "
+        for i in matrix:
+            print(i)
+        if matrix[4][0]!="E1":
+            break
+
+
+if matrix[4][0]!="E1":
+    print("FELICIDADES,GANASTE!")
+else:
+    print("Lo siento, intenta de nuevo.")
+
