@@ -1,0 +1,11 @@
+matrix=[]
+letras=["A","B","C","D","E"]
+for i in letras:
+    temp=[]
+    for z in range(1,6):
+        x=i+str(z)
+        temp.append(x)
+    matrix.append(temp)
+
+for i in matrix:
+    print(i)
