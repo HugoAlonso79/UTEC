@@ -1,4 +1,20 @@
+Diccionario={"A":["FRUTA ROJA CON SEMILLAS MUY PEQUEÑAS"],"B":["FRUTA NARANJA, EMPIEZA CON LA LETRA M"],"C":["FRUTA VERDE, PEQUEÑA Y ÁCIDA"],"D":["EMPIEZA CON M Y TERMINA EN N"],"E":["SOY VERDE, Y ME COMEN CON PAN XD"],"F":["SOMOS LAS BASE DEL CHOCOLATE"],"G":["SOMOS VERDES O MORADOS Y VENGO EN EL JUANE XD"],"H":["TAMBIÉN ME DICEN PIÑA"]}
 frutas=["FRESA","MANGO","LIMON","MELON","PALTA","CACAO","OLIVA","ANANA"]
+def fila_eleccion () :
+    x=input("Ingrese la fila, en mayúscula, de la palabra que quiere adivinar: A,  B, C, D, E")
+    if x=="A" or x=="B" or x=="C" or x=="D" or x=="E" :
+        if x=="A" :
+            x="A"
+        if x=="B":
+            x="B"
+        if x=="C":
+            x="C"
+        if x=="D" :
+            x="D"
+        if x=="E" :
+            x="E"
+    print(Diccionario[x])
+
 n=5
 m=0
 matrix=[]
@@ -12,7 +28,9 @@ for i in letras:
 
 for i in matrix:
     print(i)
+
 for i in range(n+3):
+    fila_eleccion()
     palabra=input("Inserta el nombre de una fruta en mayuúsculas")
     if palabra not in frutas:
         print("Palabra Incorrecta")
@@ -30,4 +48,3 @@ if matrix[4][0]!="E1":
     print("FELICIDADES,GANASTE!")
 else:
     print("Lo siento, intenta de nuevo.")
-
